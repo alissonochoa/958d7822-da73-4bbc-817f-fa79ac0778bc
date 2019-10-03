@@ -15,15 +15,13 @@ class Main(object):
     @staticmethod
     def plot_investment(filepath, save="", show=False):
         # TODO: implement plot_investment method
-        fig = InvestmentProject.plot(filepath=filepath, show=show)
+        fig = InvestmentProject.plot(filepath=filepath,show=show)
         if save:
             fig.savefig(save)
 
     @staticmethod
-    def ver(filepath, hurdle_rate=None):
-        inv = [InvestmentProject.from_csv(filepath=filepath, hurdle_rate=hurdle_rate)]
+    def ver(filepath,hurdle_rate=None):
+        inv = [InvestmentProject.from_csv(filepath=filepath,hurdle_rate=hurdle_rate)]
         print(inv)
-
-
 if __name__ == "__main__":
     fire.Fire(Main)
